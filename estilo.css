@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {background-image: image(url('./imagenes/joysticks.jpg'));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+body {
+    font-family: 'Urbanist', sans-serif;
+   
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+    
+   
+
+.nav{
+    grid-area: nav;
+    display: grid;
+    justify-content: space-between;
+    grid-auto-flow: column;
+    gap: 1em;
+    align-items: center;
+    height: 90px;
+}
+.nav__list{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+}
+.nav__link{
+    color: #fff;
+    text-decoration: none;
+}
+.nav__logo{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #798ff3;
+}
+.nav__menu{
+    display: none;
+
+}
+.nav__icon{
+    width: 30px;
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Asegura que el video esté detrás del contenido */
+}
+.hero__main{
+    grid-area: content;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 180px;
+    align-items: center;
+    
+}
+.hero__waves{
+    grid-area: content;
+    align-self: end;
+}
+.hero__title{
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+    color: rgb(154, 231, 178);
+}
+.hero__subtitle{
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #f7fafd;
+   
+}
+.hero__cta{
+    text-decoration: none;
+    color: #ee3030;
+    padding: 15px 60px;
+    border: 3px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 500;
+    transition:background-color 0.3s ease-in-out;
+}
+.hero__cta:hover{
+    background-color: #fff;
+    color: #1e3c72;
+}
+.hero__fondo
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url(./imagenes/joysticks.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero__img{
+    width: 100%;
+   
+}
+.woman-img {
+    width: 20%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+}
+
+.hero__woman-1 {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    text-align: right; /* Alinea la imagen a la derecha */
+}
+
+.hero__woman-2 {
+    position: absolute;
+    top: 250px;
+    left: 750px;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    text-align: left; /* Alinea la imagen a la izquierda */
+}
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0c0c0cbd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s 0.8s;
+}
+.modal__container{
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #1fe2f0;
+    border-radius: 6px;
+    padding: 1em 2em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition:var(--transition);
+
+}
+.modal__title{
+    font-size: 2.5rem;
+}
+.modal__paragraph{
+    margin-bottom: 10px;
+}
+.modal__img{
+    width: 90%;
+    max-width: 300px;
+}
+.modal__link { /* Nuevo estilo para el botón */
+    text-decoration: none;
+    color: #fcfbfb;
+    background-color: #982a8f;
+    padding: 8px 30px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.modal__link:hover{
+    color:#1e3c72;
+    background-color: #f5610b;
+}
+@media  (max-width: 800px) {
+    .nav__list{
+        display: none;
+    }
+    .nav__menu{
+        display: block;
+    }
+    .hero__main{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        text-align: center;
+    }
+    .hero__picture{
+        grid-row: 1/2;
+    }
+    .hero__img{max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    }
+    .modal__container{
+        padding: 2em 1.5em;
+    }
+
+   .modal__title{
+    font-size: 2rem;
+   }
+    
+}
