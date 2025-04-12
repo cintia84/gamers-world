@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
-* {background-image: image(url('./imagenes/joysticks.jpg'));
+* {background-image: url('video-fondo.mp4');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -109,7 +109,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-image: url(./imagenes/joysticks.jpg);
+    background-image: url(video-fondo.mp4);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
